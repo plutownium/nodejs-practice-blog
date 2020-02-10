@@ -11,8 +11,7 @@ const homeRoutes = require("./routes/home");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // grant read access to static files
-// app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // redirect to an index of blogs
 app.use("/blog", blogRoutes);
