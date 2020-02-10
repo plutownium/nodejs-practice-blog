@@ -12,3 +12,15 @@
 	background-color: papayawhip;
 	text-align: center;
 }
+
+.post {
+	background-color: lightcyan;
+	text-align: center;
+	padding: 0.5em;
+	display: inline-block;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
