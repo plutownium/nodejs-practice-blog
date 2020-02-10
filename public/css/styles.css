@@ -2,9 +2,11 @@ div__welcome {
 	padding: 5px;
 	background-color: #eeeeee;
 	font: "Arial Black", Gadget, sans-serif;
+	border: 1px solid black;
 }
 
 links {
+	border: 1px solid black;
 	padding: 0.5em;
 	background-color: papayawhip;
 }
