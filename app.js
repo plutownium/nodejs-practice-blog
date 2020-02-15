@@ -37,3 +37,5 @@ app.use((req, res, next) => {
 mongoConnect(() => {
 	app.listen(3000);
 });
+
+// TODO: Dynamically generate a link to each blog post's page

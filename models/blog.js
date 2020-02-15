@@ -1,3 +1,4 @@
+const mongodb = require("mongodb");
 const getDb = require("../util/database").getDb;
 
 class Post {
@@ -27,6 +28,19 @@ class Post {
 				return posts;
 			})
 			.catch(err => console.log(err)); // returns a cursor
+	}
+
+	static findById(postId) {
+		const db = getDb();
+		return db
+			.collection("blogs")
+			.find({ _id: new mongodb.ObjectId(postId) })
+			.next()
+			.then(post => {
+				console.log(post);
+				return post;
+			})
+			.catch(err => console.log(err));
 	}
 }
 

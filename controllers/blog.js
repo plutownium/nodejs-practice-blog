@@ -26,3 +26,15 @@ exports.getBlogs = (req, res, next) => {
 		});
 	});
 };
+
+exports.getPost = (req, res, next) => {
+	const postId = req.params.postId;
+	Post.findById(postId).then(post =>
+		res.render("blogPost", {
+			pageTitle: post.title,
+			h1: post.title,
+			content: post.content,
+			posts: null
+		})
+	);
+};
