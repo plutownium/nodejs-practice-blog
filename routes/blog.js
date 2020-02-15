@@ -4,6 +4,8 @@ const router = express.Router();
 const path = require("path");
 const rootDir = require("../util/path");
 
+const blogController = require("../controllers/blog");
+
 const posts = [];
 
 router.get("/", (req, res, next) => {
