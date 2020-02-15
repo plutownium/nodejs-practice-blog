@@ -8,10 +8,25 @@ class Post {
 
 	save() {
 		const db = getDb();
-		db.collection("blogs")
+		return db
+			.collection("blogs")
 			.insertOne(this)
 			.then(result => console.log(result))
 			.catch(err => console.log(err));
+	}
+
+	static fetchAll() {
+		const db = getDb();
+
+		return db
+			.collection("blogs")
+			.find()
+			.toArray()
+			.then(posts => {
+				console.log(posts);
+				return posts;
+			})
+			.catch(err => console.log(err)); // returns a cursor
 	}
 }
 
