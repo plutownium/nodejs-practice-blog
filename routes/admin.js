@@ -8,4 +8,6 @@ router.get("/", adminController.adminDefault);
 
 router.post("/delete/:postId", adminController.postAdminDelete);
 
+router.get("/edit/:postId", adminController.editPost);
+
 module.exports = router;

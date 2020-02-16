@@ -46,4 +46,6 @@ mongoConnect(() => {
 // todo_: Add an "About Me" section along the right side of the blog a la https://www.w3schools.com/howto/howto_css_blog_layout.asp
 
 // TODO: Add "No Blogs Found!" message if posts.length === 0 in blogs Index page
-// FIXME: prodId is not defined in controller/admin.js
+// TODO_: Add Image Upload (Or Multimedia in general -- try video)
+
+// TODO: instead of Post.fetchAll(), maybe do Post.fetchById() so you only retrieve one post from the db (efficiency)
