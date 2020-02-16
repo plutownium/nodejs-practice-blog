@@ -1,4 +1,8 @@
 <%- include("includes/head.ejs") %> <%- include("includes/nav.ejs") %>
-<img src="/images/cat.jpg" alt="cat" />
-<p>There are <%= posts.length %> posts on the blog today.</p>
+<div class="flex-container">
+	<img src="/images/cat.jpg" alt="cat" />
+</div>
+<div class="flex-container">
+	<p>There are <%= posts.length %> posts on the blog today.</p>
+</div>
 <%- include("includes/end.ejs") %>

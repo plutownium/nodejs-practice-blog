@@ -1,5 +1,13 @@
 <%- include("includes/head.ejs") %> <%- include("includes/nav.ejs") %>
-<h1><%= h1 %></h1>
+<div class="container">
+	<div class="blog-headline">
+		<h1><%= h1 %></h1>
+	</div>
+</div>
 <hr />
-<p><%= content %></p>
+<div class="container">
+	<div class="blog-content">
+		<p><%= content %></p>
+	</div>
+</div>
 > <%- include("includes/end.ejs") %>

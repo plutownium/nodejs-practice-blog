@@ -1,0 +1,16 @@
+<%- include("includes/head.ejs") %> <%- include("includes/nav.ejs") %>
+
+<div class="flex-container">
+	<div class="posts">
+		<% for (let i = 0; i < posts.length; i++) { %>
+		<div class="posts-list">
+			<ul>
+				<li>Title: <%= posts[i].title %></li>
+				<li>Content: <%= posts[i].content %></li>
+				<a href="/blog/posts/<%= posts[i]._id %>">Show Page</a>
+			</ul>
+		</div>
+		<% } %>
+	</div>
+</div>
+<%- include("includes/end.ejs") %>

@@ -8,9 +8,11 @@ const router = express.Router();
 
 const rootDir = require("../util/path");
 
-router.get("/", blogController.getBlogs);
+router.get("/", blogController.getIndex);
 
 router.post("/add-post", blogController.postAddPost);
+
+router.get("/submit", blogController.getSubmit);
 
 router.get("/posts/:postId", blogController.getPost);
 

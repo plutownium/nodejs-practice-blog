@@ -9,7 +9,7 @@ exports.postAddPost = (req, res, next) => {
 	const post = new Post(title, content);
 	post.save();
 	Post.fetchAll().then(posts => {
-		res.render("blog", {
+		res.render("blogIndex", {
 			pageTitle: "Blog",
 			h1: "The Blog Page",
 			posts: posts // some data from the MongoDB server needs to go here
@@ -17,9 +17,19 @@ exports.postAddPost = (req, res, next) => {
 	});
 };
 
-exports.getBlogs = (req, res, next) => {
+exports.getIndex = (req, res, next) => {
 	Post.fetchAll().then(posts => {
-		res.render("blog", {
+		res.render("blogIndex", {
+			pageTitle: "Blog",
+			h1: "The Blog Page",
+			posts: posts // some data from the MongoDB server needs to go here
+		});
+	});
+};
+
+exports.getSubmit = (req, res, next) => {
+	Post.fetchAll().then(posts => {
+		res.render("blogSubmit", {
 			pageTitle: "Blog",
 			h1: "The Blog Page",
 			posts: posts // some data from the MongoDB server needs to go here

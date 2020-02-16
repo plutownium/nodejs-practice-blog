@@ -38,4 +38,8 @@ mongoConnect(() => {
 	app.listen(3000);
 });
 
-// TODO: Dynamically generate a link to each blog post's page
+// todo_: make an admin page && allow the admin page to delete individual blog posts
+// TODO_: let the admin page edit each individual blog post
+// TODO_: create users & allow users to log in
+// todo_: make users have blog posts. Meaning, each blog has an associated user in its document
+// todo_: Add an "About Me" section along the right side of the blog a la https://www.w3schools.com/howto/howto_css_blog_layout.asp
