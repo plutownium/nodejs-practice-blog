@@ -42,6 +42,15 @@ class Post {
 			})
 			.catch(err => console.log(err));
 	}
+
+	static deleteById(postId) {
+		const db = getDb();
+		return db
+			.collection("blogs")
+			.deleteOne({ _id: new mongodb.ObjectID(postId) })
+			.then(result => console.log("Deleted!"))
+			.catch(err => console.log(err));
+	}
 }
 
 module.exports = Post;

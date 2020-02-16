@@ -1,36 +1,35 @@
-.div__welcome {
+img {
+	max-width: 400px;
+	max-height: 200px;
+}
+
+input {
+	border: 2px solid rgba(2, 189, 252, 0.952);
+	border-radius: 4px;
+	width: 300px;
+	height: 30px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
 	padding: 5px;
-	background-color: #eeeeee;
-	font: "Arial Black", Gadget, sans-serif;
-	border: 1px solid black;
-	text-align: center;
+	margin: 5px;
 }
 
-.links {
-	border: 1px solid black;
-	padding: 0.5em;
-	background-color: papayawhip;
-	text-align: center;
+button {
+	border-radius: 5px;
+	border: 0;
+	width: 80px;
+	height: 80px;
+	font-family: Tahoma;
+	background-color: rgb(236, 218, 159);
 }
 
-.new-post {
-	background-color: lightcyan;
-	text-align: center;
-	padding: 0.5em;
-	display: inline-block;
-	margin: 20px 5px 2px 5px;
-	border-radius: 10px;
-}
-
-.flex-container {
+.admin-buttons {
 	display: flex;
 	justify-content: center;
 }
 
-.container {
-	text-align: center;
-	display: flex;
-	justify-content: center;
+.admin-buttons div {
+	margin: 0px 5px 0px 5px;
 }
 
 .blog-headline {
@@ -51,6 +50,41 @@
 	margin: 15px;
 }
 
+.container {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.div__welcome {
+	padding: 5px;
+	background-color: #eeeeee;
+	font: "Arial Black", Gadget, sans-serif;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
+
+.links {
+	border: 1px solid black;
+	padding: 0.5em;
+	background-color: papayawhip;
+	text-align: center;
+}
+
+.new-post {
+	background-color: lightcyan;
+	text-align: center;
+	padding: 0.5em;
+	display: inline-block;
+	margin: 20px 5px 2px 5px;
+	border-radius: 10px;
+}
+
 .posts-list li {
 	list-style-type: none;
 	max-width: 300px;
@@ -64,4 +98,21 @@
 	border-radius: 8px;
 	background-color: lightgoldenrodyellow;
 	margin: 15px;
+	padding: 5px 10px 0px 0px;
+}
+
+.tiny-box {
+	margin: 10px 0px 0px 0px;
+}
+
+.danger button {
+	margin: 10px 0px 0px 0px;
+	height: 30px;
+	background-color: rgb(236, 74, 74);
+}
+
+.edit button {
+	margin: 10px 0px 0px 0px;
+	height: 30px;
+	background-color: lightgreen;
 }

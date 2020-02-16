@@ -12,6 +12,7 @@ app.set("views", "views"); // let express know where to find our views
 
 const blogRoutes = require("./routes/blog");
 const homeRoutes = require("./routes/home");
+const adminRoutes = require("./routes/admin");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // redirect to an index of blogs
 app.use("/blog", blogRoutes);
 app.use(homeRoutes);
+app.use("/admin", adminRoutes);
 
 // set a 404 error page
 app.use((req, res, next) => {
@@ -38,8 +40,10 @@ mongoConnect(() => {
 	app.listen(3000);
 });
 
-// todo_: make an admin page && allow the admin page to delete individual blog posts
 // TODO_: let the admin page edit each individual blog post
 // TODO_: create users & allow users to log in
 // todo_: make users have blog posts. Meaning, each blog has an associated user in its document
 // todo_: Add an "About Me" section along the right side of the blog a la https://www.w3schools.com/howto/howto_css_blog_layout.asp
+
+// TODO: Add "No Blogs Found!" message if posts.length === 0 in blogs Index page
+// FIXME: prodId is not defined in controller/admin.js
