@@ -31,10 +31,11 @@ exports.editPost = (req, res, next) => {
 };
 
 exports.submitEdit = (req, res, next) => {
-	// execute code for submitting an edit.
-	// Update the database with new info.
-
-	// NOTE: Access form data... req.body.title, req.body.content, req.body.id
-	// Then use req.body.id to .updateOne({ _id: req.body.id }) in mongoDB: https://docs.mongodb.com/manual/tutorial/update-documents/
-	const postId = req.params.res.redirect("/admin");
+	// Useful link: https://docs.mongodb.com/manual/tutorial/update-documents/
+	const postId = req.params.postId;
+	const updatedTitle = req.body.title;
+	const updatedContent = req.body.content;
+	Post.editById(postId, updatedTitle, updatedContent)
+		.then(res.redirect("/admin"))
+		.catch(err => console.log("Error in submitEdit:", err));
 };
